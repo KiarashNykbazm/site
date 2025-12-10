@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مسیر ما 🌸</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- صفحه ورود -->
+    <div id="loginPage" class="page active">
+        <div class="login-container">
+            <div class="floating-hearts"></div>
+            <h1 class="glowing-title">🌸 مسیر ما 🌸</h1>
+            <p class="subtitle">یه سفر کوچیک تو ۴ ماه باهم...</p>
+            
+            <div class="lock-animation">
+                <div class="lock">🔒</div>
+            </div>
+            
+            <div class="password-box">
+                <label>رمز عبور رو بزن (تاریخ اون شب خاص):</label>
+                <input type="password" id="passwordInput" maxlength="4" placeholder="****">
+                <button id="unlockBtn" class="btn-primary">باز کن 💕</button>
+                <p class="hint">راهنما: روزی که دنیامون عوض شد... ۰۵__</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحه تایم‌لاین -->
+    <div id="timelinePage" class="page">
+        <div class="timeline-header">
+            <h2>🎀 مسیر ۴ ماهه ما 🎀</h2>
+            <div class="countdown-box">
+                <p>تا ماهگرد بعدی:</p>
+                <div id="countdown">
+                    <span id="days">00</span> روز
+                    <span id="hours">00</span> ساعت
+                    <span id="minutes">00</span> دقیقه
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <!-- ماه 1 -->
+            <div class="timeline-item special" data-month="1">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🎂</div>
+                </div>
+                <div class="timeline-content">
+                    <h3>ماه اول - تولدت! 🎉</h3>
+                    <div class="month-image">
+                        <img src="images/month1.jpg" alt="ماه اول">
+                    </div>
+                    <p class="memory-text">ماهی که همه چیز شروع شد... با یه تولد خاص و یه شروع خاص‌تر!</p>
+                    <button class="btn-game" onclick="playGame(1)">بازی این ماه 🎮</button>
+                </div>
+            </div>
+
+            <!-- ماه 2 -->
+            <div class="timeline-item" data-month="2">
+                <div class="timeline-marker">
+                    <div class="marker-icon">🌙</div>
+                </div>
+                <div class="timeline-content">
+                    <h3>ماه دوم - شب تا صبح 💤</h3>
+                    <div class="month-image">
+                        <img src="images/month2.jpg" alt="ماه دوم">
+                    </div>
+                    <p class="memory-text">یادته اون شبی که پشت گوشی تا صبح حرف زدیم؟ انگار وقت یه چشم بهم زدن گذشت!</p>
+                    <button class="btn-game" onclick="playGame(2)">بازی این ماه 🎮</button>
+                </div>
+            </div>
+
+            <!-- ماه 3 -->
+            <div class="timeline-item" data-month="3">
+                <div class="timeline-marker">
+                    <div class="marker-icon">😍</div>
+                </div>
+                <div class="timeline-content">
+                    <h3>ماه سوم - اولین دیدار 📸</h3>
+                    <div class="month-image">
+                        <img src="images/month3.jpg" alt="ماه سوم">
+                    </div>
+                    <p class="memory-text">اون لحظه که عکست رو فرستادی... جدی جدی چشام از ذوق گرد شد و دلم ریخت!</p>
+                    <button class="btn-game" onclick="playGame(3)">بازی این ماه 🎮</button>
+                </div>
+            </div>
+
+            <!-- ماه 4 -->
+            <div class="timeline-item current" data-month="4">
+                <div class="timeline-marker">
+                    <div class="marker-icon">💝</div>
+                </div>
+                <div class="timeline-content">
+                    <h3>ماه چهارم - الان! ✨</h3>
+                    <div class="month-image">
+                        <img src="images/month4.jpg" alt="ماه چهارم">
+                    </div>
+                    <p class="memory-text">۴ ماه پر از لحظات خاص... و قراره ماه‌های خیلی بیشتری باهم داشته باشیم!</p>
+                    <button class="btn-game" onclick="playGame(4)">بازی این ماه 🎮</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- گنج‌های پنهان -->
+        <div class="hidden-treasures">
+            <p class="treasure-hint">🔍 چیزایی تو صفحه قایم شدن... دنبالشون بگرد!</p>
+            
+            <div class="treasure-icon" data-treasure="1" style="top: 15%; left: 10%;">
+                🍬
+                <div class="treasure-content">
+                    <p>"آبنبات تلخی" - یعنی وقتایی که دعوامون میشه ولی دلم برات تنگ میشه!</p>
+                </div>
+            </div>
+            
+            <div class="treasure-icon" data-treasure="2" style="top: 40%; right: 15%;">
+                💄
+                <div class="treasure-content">
+                    <p>یادت باشه هر وقت لوازم آرایش خواستی، من حاضرم برات کل آرایشگاه رو بخرم!</p>
+                </div>
+            </div>
+            
+            <div class="treasure-icon" data-treasure="3" style="top: 65%; left: 20%;">
+                🌹
+                <div class="treasure-content">
+                    <p>لیلیوم برای روزای خوب، رز برای روزای عادی، و من برای همیشه!</p>
+                </div>
+            </div>
+            
+            <div class="treasure-icon" data-treasure="4" style="top: 85%; right: 25%;">
+                🥛
+                <div class="treasure-content">
+                    <p>شیر موز که نوشیدیم، بزن بریم یه چایی با هم بخوریم!</p>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-continue" onclick="goToQuiz()">ادامه بده ➡️</button>
+    </div>
+
+    <!-- صفحه چالش -->
+    <div id="quizPage" class="page">
+        <div class="quiz-container">
+            <h2>🎯 چالش سریع!</h2>
+            <p class="quiz-intro">ببینیم چقدر منو می‌شناسی...</p>
+            
+            <div class="quiz-question" data-question="1">
+                <h3>سوال ۱: کی بیشتر دیر میاد سر قرار؟</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="selectAnswer(1, 'تو')">تو 😏</button>
+                    <button class="quiz-option" onclick="selectAnswer(1, 'من')">من 😇</button>
+                    <button class="quiz-option" onclick="selectAnswer(1, 'هر دومون')">هر دومون! 😂</button>
+                </div>
+            </div>
+
+            <div class="quiz-question hidden" data-question="2">
+                <h3>سوال ۲: کی بیشتر غذا سفارش میده؟</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="selectAnswer(2, 'تو')">تو 🍕</button>
+                    <button class="quiz-option" onclick="selectAnswer(2, 'من')">من 🍔</button>
+                </div>
+            </div>
+
+            <div class="quiz-question hidden" data-question="3">
+                <h3>سوال ۳: چی بیشتر از من دوست داری؟</h3>
+                <div class="quiz-options">
+                    <button class="quiz-option" onclick="selectAnswer(3, 'خودت')">خودت! ❤️</button>
+                    <button class="quiz-option" onclick="selectAnswer(3, 'لواشک')">لواشکات 🍬</button>
+                    <button class="quiz-option" onclick="selectAnswer(3, 'هیچکدوم')">جواب اشتباه نده 😤</button>
+                </div>
+            </div>
+
+            <button class="btn-final hidden" onclick="goToFinal()">نتیجه نهایی 🎁</button>
+        </div>
+    </div>
+
+    <!-- صفحه پایانی -->
+    <div id="finalPage" class="page">
+        <div class="final-container">
+            <div class="confetti-container"></div>
+            
+            <h2 class="final-title">🎊 ماهگرد مبارک نرگس جونم! 🎊</h2>
+            
+            <div class="envelope-animation">
+                <div class="envelope" id="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <p>کلیک کن باز کن! 💌</p>
+                    </div>
+                </div>
+                
+                <div class="letter hidden" id="letter">
+                    <div class="letter-content">
+                        <h3>به نرگس عزیزم 💕</h3>
+                        <p>۴ ماه گذشت... ۴ ماه پر از خنده، دعوا، آشتی، و خاطرات خاص.</p>
+                        <p>از اون شب که مخمو زدم و رفتم پیشت (و تو از من متنفر بودی! 😂) تا الان که نمی‌تونم یه روز بدون حرف زدن باهات رو تحمل کنم.</p>
+                        <p>میدونم گاهی حوصله‌ات سر میره، گاهی دعوامون میشه، ولی باور کن هیچ جای دنیا رو با بودن کنارت عوض نمی‌کنم.</p>
+                        <p class="love-measure">دوستت دارم به اندازه... <strong>۵ تا قابلمه آبگوشت!</strong> 🍲😄</p>
+                        <hr>
+                        <p class="surprise-text">🎬 سوپرایز امشب:</p>
+                        <p class="movie-night"><strong>امشب با هم فیلم می‌بینیم!</strong></p>
+                        <p class="small-text">پاپ‌کورن، نوشیدنی، و یه شب خاص فقط برای ما دوتا ✨</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- دکمه مخفی Easter Egg -->
+            <div class="easter-egg-trigger" id="easterEgg">
+                <p class="hint-text">سه بار کلیک کن اینجا... 🤫</p>
+            </div>
+            
+            <div class="easter-egg-content hidden" id="easterEggContent">
+                <div class="secret-message">
+                    <h3>🎁 پیام مخفی!</h3>
+                    <p>به همه کسایی که بهت میگن "یه عطر خوب بگیر"، میگم داری اشتباه می‌کنی!</p>
+                    <p>چون خودت عطر خوشبوترین زندگی منی 🌸</p>
+                    <p class="fun-fact">و اینکه... میدونم لواشکات تموم شده، فردا برات می‌خرم! 😉</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal برای بازی‌ها -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="gameContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
